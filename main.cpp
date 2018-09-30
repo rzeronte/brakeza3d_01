@@ -15,7 +15,11 @@ int main() {
     // Limpiamos la pantalla
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
     SDL_RenderClear(renderer);
-    
+
+    SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+    SDL_RenderDrawPoint(renderer, 10, 10);
+    SDL_RenderPresent(renderer);
+
     while (1) {
         if (SDL_PollEvent(&event) && event.type == SDL_QUIT)
             break;
